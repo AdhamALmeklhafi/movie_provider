@@ -62,7 +62,7 @@ class _HomeState extends State<Home> {
                         height:
                             Dimensions.calculateH(context: context, number: 5),
                       ),
-                      NewTv(),
+                      const NewTv(),
                       SizedBox(
                         height:
                             Dimensions.calculateH(context: context, number: 5),
@@ -76,7 +76,7 @@ class _HomeState extends State<Home> {
                           ),
                         ],
                       ),
-                      NewPerson(),
+                      const NewPerson(),
                       SizedBox(
                         height:
                             Dimensions.calculateH(context: context, number: 5),
@@ -107,7 +107,7 @@ class _HomeState extends State<Home> {
                           ),
                         ],
                       ),
-                      NewMovies(),
+                      const NewMovies(),
                     ],
                   ),
                 ],

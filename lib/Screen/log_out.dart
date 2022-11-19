@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:movie_apps/Constant/Constant.dart';
-import 'package:movie_apps/Screen/SignIn.dart';
 import 'package:movie_apps/Screen/home.dart';
 import 'package:movie_apps/Screen/search.dart';
 import 'package:movie_apps/Widget/bottom_bar.dart';
@@ -25,7 +24,7 @@ class _LogOutState extends State<LogOut> {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
+              const Text(
                 'Hello, Want to log out!',
                 style: primaryTextF,
               ),
@@ -40,12 +39,7 @@ class _LogOutState extends State<LogOut> {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                onPressed: () {
-                  Navigator.pushAndRemoveUntil(context,
-                      MaterialPageRoute(builder: (context) {
-                    return SignIn();
-                  }), (route) => false);
-                },
+                onPressed: () {},
                 child: const Text('Click to Log Out'),
               ),
             ],
@@ -62,7 +56,7 @@ class _LogOutState extends State<LogOut> {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return Home();
+                      return const Home();
                     },
                   ),
                 );
@@ -72,7 +66,7 @@ class _LogOutState extends State<LogOut> {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return SearchPage();
+                      return const SearchPage();
                     },
                   ),
                 );
@@ -82,7 +76,7 @@ class _LogOutState extends State<LogOut> {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return LogOut();
+                      return const LogOut();
                     },
                   ),
                 );

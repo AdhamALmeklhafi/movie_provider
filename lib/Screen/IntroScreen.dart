@@ -70,7 +70,7 @@ class IntroScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF1F202B),
+      backgroundColor: const Color(0xFF1F202B),
       body: SafeArea(
         child: Stack(
           children: [
@@ -87,12 +87,12 @@ class IntroScreen extends StatelessWidget {
                     context, MaterialPageRoute(builder: (context) => Home()));
               },
               showSkipButton: true,
-              skip: Text(
+              skip: const Text(
                 'Skip',
                 style: TextStyle(color: Color(0xFFF09A36), fontSize: 18),
               ),
               next: const Icon(Icons.arrow_forward),
-              globalBackgroundColor: Color(0xFF1F202B),
+              globalBackgroundColor: const Color(0xFF1F202B),
               done: const Text("Done",
                   style: TextStyle(color: Color(0xFFF09A36), fontSize: 18)),
               dotsDecorator: const DotsDecorator(

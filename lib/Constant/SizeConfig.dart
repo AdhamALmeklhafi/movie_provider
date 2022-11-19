@@ -9,13 +9,11 @@ class SizeOfConfig {
   static late double heighScreen;
 
   static double? defaultSize;
-  static Orientation? _orientation;
 
   void init(BuildContext context) {
     _mediaQueryData = MediaQuery.of(context);
     widthScreen = _mediaQueryData.size.width;
     heighScreen = _mediaQueryData.size.height;
-    _orientation = _mediaQueryData.orientation;
   }
 }
 

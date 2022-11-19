@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:movie_apps/Constant/Constant.dart';
-import 'package:movie_apps/Constant/SizeConfig.dart';
 import 'package:movie_apps/Constant/dimensions.dart';
 import 'package:movie_apps/view/movie_list.dart';
 import 'package:provider/provider.dart';
@@ -18,7 +17,7 @@ class _DetailScreenState extends State<DetailScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color(0xFF1F202B),
+        backgroundColor: const Color(0xFF1F202B),
         body: Consumer(
           builder: (context, MovieList movieList, child) {
             return movieList.isLoading
@@ -38,7 +37,7 @@ class _DetailScreenState extends State<DetailScreen> {
                             size: 35,
                           ),
                         ),
-                        backgroundColor: Color(0xFFF09A36),
+                        backgroundColor: const Color(0xFFF09A36),
                         elevation: 50,
                         expandedHeight: Dimensions.calculateH(
                             context: context, number: 350),
@@ -85,7 +84,7 @@ class _DetailScreenState extends State<DetailScreen> {
                         delegate: SliverChildListDelegate(
                           [
                             Padding(
-                              padding: EdgeInsets.only(top: 20, left: 15),
+                              padding: const EdgeInsets.only(top: 20, left: 15),
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
@@ -104,7 +103,7 @@ class _DetailScreenState extends State<DetailScreen> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsets.only(top: 20, left: 15),
+                              padding: const EdgeInsets.only(top: 20, left: 15),
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
@@ -127,7 +126,8 @@ class _DetailScreenState extends State<DetailScreen> {
                               children: [
                                 // ignore: prefer_const_constructors
                                 Padding(
-                                  padding: EdgeInsets.only(top: 20, left: 15),
+                                  padding:
+                                      const EdgeInsets.only(top: 20, left: 15),
                                   child: const Text(
                                     'Release date:',
                                     style: primaryText,

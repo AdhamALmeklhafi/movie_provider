@@ -22,7 +22,7 @@ class _SearchPageState extends State<SearchPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF1F202B),
+      backgroundColor: const Color(0xFF1F202B),
       body: SafeArea(
         child: ListView(
           physics: const BouncingScrollPhysics(),
@@ -75,7 +75,7 @@ class _SearchPageState extends State<SearchPage> {
                     height:
                         Dimensions.calculateH(context: context, number: 700),
                     child: ListView.builder(
-                      padding: EdgeInsets.only(left: 0, right: 6),
+                      padding: const EdgeInsets.only(left: 0, right: 6),
                       itemCount: books.length,
                       scrollDirection: Axis.vertical,
                       itemBuilder: (context, index) {
@@ -87,7 +87,7 @@ class _SearchPageState extends State<SearchPage> {
                             Padding(
                               padding: const EdgeInsets.only(bottom: 15),
                               child: Container(
-                                margin: EdgeInsets.only(right: 15),
+                                margin: const EdgeInsets.only(right: 15),
                                 height: 130,
                                 width: 80,
                                 decoration: BoxDecoration(
@@ -105,7 +105,7 @@ class _SearchPageState extends State<SearchPage> {
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: <Widget>[
-                                  Container(
+                                  SizedBox(
                                     width: Dimensions.calculateW(
                                         context: context, number: 200),
                                     child: Text(
@@ -119,7 +119,7 @@ class _SearchPageState extends State<SearchPage> {
                                   const SizedBox(
                                     height: 10.0,
                                   ),
-                                  Container(
+                                  SizedBox(
                                     width: 250,
                                     child: Text(
                                       book.overview,
@@ -149,14 +149,16 @@ class _SearchPageState extends State<SearchPage> {
             buttonBaN = index;
             setState(() {
               if (buttonBaN == 0) {
-                Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => Home()));
-              } else if (buttonBaN == 1) {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => SearchPage()));
-              } else if (buttonBaN == 2) {
+                    MaterialPageRoute(builder: (context) => const Home()));
+              } else if (buttonBaN == 1) {
                 Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => LogOut()));
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const SearchPage()));
+              } else if (buttonBaN == 2) {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const LogOut()));
               }
             });
           }),

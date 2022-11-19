@@ -1,8 +1,8 @@
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:lottie/lottie.dart';
+import 'package:movie_apps/Screen/home.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:flutter/material.dart';
-import '../Constant/Auth_Ser.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -15,7 +15,7 @@ class SplashScreen extends StatelessWidget {
           'assets/lottie/Splash.json',
         ),
       ),
-      nextScreen: AuthSev().handleAuthServer(),
+      nextScreen: Home(),
       splashIconSize: 250,
       duration: 5000,
       splashTransition: SplashTransition.fadeTransition,

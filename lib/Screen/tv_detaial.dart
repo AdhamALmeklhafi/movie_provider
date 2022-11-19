@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:movie_apps/Constant/Constant.dart';
-import 'package:movie_apps/Constant/SizeConfig.dart';
 import 'package:movie_apps/Constant/dimensions.dart';
 import 'package:movie_apps/view/movie_list.dart';
 import 'package:provider/provider.dart';
@@ -18,7 +17,7 @@ class _DetailTvScreenState extends State<DetailTvScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color(0xFF1F202B),
+        backgroundColor: const Color(0xFF1F202B),
         body: Consumer(
           builder: (context, MovieList movieList, child) {
             return movieList.isLoading
@@ -85,7 +84,7 @@ class _DetailTvScreenState extends State<DetailTvScreen> {
                         delegate: SliverChildListDelegate(
                           [
                             Padding(
-                              padding: EdgeInsets.only(top: 20, left: 15),
+                              padding: const EdgeInsets.only(top: 20, left: 15),
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
@@ -104,7 +103,7 @@ class _DetailTvScreenState extends State<DetailTvScreen> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsets.only(top: 20, left: 15),
+                              padding: const EdgeInsets.only(top: 20, left: 15),
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
@@ -127,7 +126,8 @@ class _DetailTvScreenState extends State<DetailTvScreen> {
                               children: [
                                 // ignore: prefer_const_constructors
                                 Padding(
-                                  padding: EdgeInsets.only(top: 20, left: 15),
+                                  padding:
+                                      const EdgeInsets.only(top: 20, left: 15),
                                   child: const Text(
                                     'Release date:',
                                     style: primaryText,
